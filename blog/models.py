@@ -7,9 +7,9 @@ from django.db import models
 # class : 첫 번째 글자 대문자
 # function : 두 번째 글자 대문자
 
-class Post(models.Model):
+class Post(models.Model):                   # 무조건, models. (상속을 받으려구!)
     title = models.CharField(max_length=30) # 글자수 제한 가능
-    content = models.TextField() # 글자수 제한 없음
+    content = models.TextField()            # 글자수 제한 없음
 
     create_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
